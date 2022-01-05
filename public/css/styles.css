@@ -3,6 +3,14 @@
     padding: 0px;    
     box-sizing: border-box;
 }
+.left-enlaces , .right-enlaces{
+    display: flex;
+   justify-content: space-around
+   }
+
+   .left-enlaces ul {
+       padding: 0;
+   }
 
 body{
     font-family: 'Roboto', sans-serif;
@@ -17,13 +25,13 @@ p{
     font-size: 12px;
 }
 
-div.top-header{
+.top-header{
     display: flex;
-    flex-wrap: wrap;
     padding: 5%;
+    flex-wrap: wrap;
 }
 
-header div.top-header p{
+header div.top-header {
     width: 100%;
     text-align: center;
     margin-top: 10px;
@@ -33,8 +41,8 @@ header{
     background-color: #EAC926;
 }
 
-header div.logo,
-header .form{
+header .logo,
+header .form{ 
     width: 50%;
 }
 
@@ -67,6 +75,7 @@ header .form .input{
     outline: none;
     color: #666;
     padding: 2px;
+    border-radius: 8px;
 }
 
 header .form .submit{
@@ -82,13 +91,13 @@ div.burger-menu{
 
 div.burger-menu i{
     background-color: #0044AA;
-    border-radius: 5px;
+    border-radius: 8px;
     color: #FFF;
     font-size: 20px;
     height: 40px;
     margin: 10px 0px 20px 0px;
     padding: 10px;
-    width: 40px;
+    width: 40px; 
 }
 
 div.last-visit,
@@ -173,11 +182,16 @@ article div.main-article{
     padding: 15px;
 }
 
+nav {
+    display: none;
+}
+
+
+
 @media (min-width: 361px){
     main section article .description{
         display: block;
     }
-
     main section article{
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
@@ -198,10 +212,56 @@ article div.main-article{
     .discount{
         width: 50%;
     }
+    .burger-menu{
+        display: block;
+    }
+    nav {
+        display: none;
+    }
 }
 
 @media (min-width: 769px){
+
+    .burger-menu{
+        display: none;
+    }
+   header nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 20px;
+    }
     main section div.products article{
         width: 22%;
     }
+
+    header .top-header{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    header div .logo div .copy-header div .form {
+        justify-content: space-between;
+    }
+
+    header div .logo{
+        max-width: 23%; 
+    }
+
+    div .copy-header{
+        text-align: right;
+        font-size: 60%;
+    }
+
+    header nav li{
+       margin: 0 15px;
+    }
+
+    main .login{
+        justify-content: center;
+        display: flex;
+        
+
+    }
+
+
 }
