@@ -2,10 +2,11 @@ const express = require('express');
 const app = express();
 app.use(express.static('public'));
 
+app.set('port', process.env.PORT || 3000)
 
-app.listen(process.env.PORT || 3030, ()=>{
-    console.log('Servidor Corriendo');
-});
+app.listen(app.get('port'),()=>{
+    console.log('on http://localhost:' + app.get('port'))
+
 
 
 app.get('/', (req,res)=>{
@@ -18,4 +19,4 @@ app.get('/login', (req,res)=>{
 
 app.get('/register', (req,res)=>{
     res.sendFile(__dirname + '/views/register.html');
-});
+})})
