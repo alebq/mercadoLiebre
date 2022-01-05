@@ -8,7 +8,8 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon src/app.js -e js, mjs, json, html, css"
+    "dev": "nodemon src/app.js -e js, mjs, json, html, css",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
